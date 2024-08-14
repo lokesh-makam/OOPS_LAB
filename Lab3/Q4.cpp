@@ -29,17 +29,10 @@ public:
         telephoneNumber = phone;
         drivingLicenseNumber = license;
     }
+    // Default
     Person()
     {
-        name = "";
-        dateOfBirth = "";
-        bloodGroup = "";
-        height = 0.0;
-        weight = 0.0;
-        insurancePolicyNumber = "";
-        contactAddress = "";
-        telephoneNumber = "";
-        drivingLicenseNumber = "";
+        cout << "Default Constructor called" << endl;
     }
 
     // Copy
@@ -64,7 +57,7 @@ public:
 
     friend class DisplayPerson; // Friend class
 
-    inline void displayContactInfo() 
+    inline void displayContactInfo()
     {
         cout << "Contact Address: " << contactAddress << endl;
         cout << "Telephone Number: " << telephoneNumber << endl;

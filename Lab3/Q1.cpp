@@ -34,14 +34,7 @@ public:
     }
     PayRoll() // default
     {
-        Employee_name = "";
-        code = 0;
-        Designation = "";
-        acc_no = 0;
-        dateOfJoining = "";
-        basicpay = 0.0;
-        da = hra = cca = 0.0;
-        ppf = gpf = cpf = lic = nss = nsc = 0.0;
+        cout << "Default Constructor called" << endl;
     }
     PayRoll(PayRoll &p)
     { // Copy
@@ -69,8 +62,7 @@ public:
 
     friend class DisplayDetails; // friend class
 
-    
-    inline float calculateNetPay()  // Inline function
+    inline float calculateNetPay() // Inline function
     {
         float grossPay = basicpay + da + hra + cca;
         float deductions = ppf + gpf + cpf + lic + nss + nsc;
@@ -107,6 +99,7 @@ int main()
     PayRoll *employee = new PayRoll("Lokesh", 1001, "Manager", 123456789, "2020-01-15", 50000.0, 10000.0, 8000.0, 2000.0, 3000.0, 2000.0, 1500.0, 1000.0, 500.0, 400.0);
     DisplayDetails details;
     details.showDetails(*employee);
-    // Free 
     delete employee;
+
+    return 0;
 }

@@ -25,15 +25,10 @@ public:
     // Default constructor
     MarkSheet()
     {
-        studentName = "";
-        rollNumber = 0;
-        subjectCode = "";
-        subjectName = "";
-        internalMarks = 0;
-        externalMarks = 0;
+        cout << "Default Constructor called" << endl;
     }
 
-    MarkSheet( MarkSheet &m)   // Copy constructor
+    MarkSheet(MarkSheet &m) // Copy constructor
     {
         studentName = m.studentName;
         rollNumber = m.rollNumber;
@@ -43,25 +38,25 @@ public:
         externalMarks = m.externalMarks;
     }
 
-    ~MarkSheet()    // Destructor
+    ~MarkSheet() // Destructor
     {
-       cout<<"Destructor called"<<endl;
+        cout << "Destructor called" << endl;
     }
 
-    
-    friend class DisplayMarkSheet;  // Friend 
+    friend class DisplayMarkSheet; // Friend
 
-   
-    inline int calculateTotalMarks()  // Inline function 
+    inline int calculateTotalMarks() // Inline function
     {
         return internalMarks + externalMarks;
     }
 };
 
 // friend class defination
-class DisplayMarkSheet {
+class DisplayMarkSheet
+{
 public:
-    void showMarkSheet( MarkSheet& m) {
+    void showMarkSheet(MarkSheet &m)
+    {
         cout << "Student Name: " << m.studentName << endl;
         cout << "Roll Number: " << m.rollNumber << endl;
         cout << "Subject Code: " << m.subjectCode << endl;
@@ -73,7 +68,7 @@ public:
 };
 int main()
 {
-    MarkSheet* student = new MarkSheet("Lokesh", 1093, "AI101", "OOPS", 40, 60);
+    MarkSheet *student = new MarkSheet("Lokesh", 1093, "AI101", "OOPS", 40, 60);
     DisplayMarkSheet display;
     display.showMarkSheet(*student);
     delete student;

@@ -24,18 +24,13 @@ public:
         bookCost = cost;
     }
 
-    // Default 
+    // Default
     Book()
     {
-        accessionNumber = 0;
-        authorName = "";
-        bookTitle = "";
-        publicationYear = 0;
-        publisherName = "";
-        bookCost = 0.0;
+        cout << "Default Constructor called" << endl;
     }
 
-    // Copy 
+    // Copy
     Book(Book &b)
     {
         accessionNumber = b.accessionNumber;
@@ -49,13 +44,12 @@ public:
     // Destructor
     ~Book()
     {
-        cout<<"Destructor called"<<endl;
+        cout << "Destructor called" << endl;
     }
 
-     
-    friend class DisplayBook;   // Friend class
+    friend class DisplayBook; // Friend class
 
-    inline float getCost()    // Inline function 
+    inline float getCost() // Inline function
     {
         return bookCost;
     }

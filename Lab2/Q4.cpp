@@ -14,7 +14,6 @@ private:
     string admissionDate;
 
 public:
-    // Constructor with parameters
     Patient(string n, char s, int a, int w, int b, string ill, string date) {
         name = n;
         sex = s;
@@ -25,7 +24,7 @@ public:
         admissionDate = date;
     }
 
-    // Default constructor
+    // Default 
     Patient() {
         name = "";
         sex = 'M';
@@ -36,8 +35,7 @@ public:
         admissionDate = "";
     }
 
-    // Copy constructor
-    Patient(const Patient& p) {
+    Patient(Patient& p) {  //copy
         name = p.name;
         sex = p.sex;
         age = p.age;
@@ -49,11 +47,10 @@ public:
 
     // Destructor
     ~Patient() {
-        // Clean up resources if needed
+        cout<<"Destructor called"<<endl;
     }
 
-    // Function to display patient details
-    void display() const {
+    void display() {
         cout << "Name: " << name << endl;
         cout << "Sex: " << sex << endl;
         cout << "Age: " << age << endl;
@@ -65,10 +62,7 @@ public:
 };
 
 int main() {
-    // Creating a patient object using parameterized constructor
-    Patient p1("John Doe", 'M', 45, 12, 5, "Flu", "2024-08-14");
-
-    // Displaying patient details
+    Patient p1("Lokesh", 'M', 19, 12, 5, "Flu", "2024-08-14");
     p1.display();
 
     return 0;
