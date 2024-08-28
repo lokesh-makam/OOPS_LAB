@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-class Complex {
+class Complex
+{
 private:
     double real, imag;
 
@@ -13,22 +14,26 @@ public:
     void display();
 };
 
-Complex::Complex(double real, double imag) {
+Complex::Complex(double real, double imag)
+{
     this->real = real;
     this->imag = imag;
 }
 
-Complex Complex::multiply(Complex &c) {
+Complex Complex::multiply(Complex &c)
+{
     Complex result((this->real * c.real) - (this->imag * c.imag),
                    (this->real * c.imag) + (this->imag * c.real));
     return result;
 }
 
-void Complex::display() {
+void Complex::display()
+{
     cout << real << (imag >= 0 ? " + " : " - ") << abs(imag) << "i" << endl;
 }
 
-int main() {
+int main()
+{
     double real, imag, real1, imag1;
 
     cout << "Enter the real part of the first complex number: ";
