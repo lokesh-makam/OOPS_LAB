@@ -17,7 +17,6 @@ public  class Q1 {
             this.avgFees = s.nextFloat();
             System.out.println("Enter tolls per day:");
             this.tolls = s.nextInt();
-            s.close();
         }
     
         void totalCost() {
