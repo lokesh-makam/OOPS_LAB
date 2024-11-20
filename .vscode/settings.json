@@ -12,5 +12,9 @@
         "tuple": "cpp",
         "utility": "cpp",
         "variant": "cpp"
-    }
+    },
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/lokesh/Downloads/mysql-connector-j-9.0.0/mysql-connector-j-9.0.0.jar"
+    ]
 }
