@@ -7,7 +7,6 @@ class GasMileage {
     int noOfTrips;
     float gallones[];
     float m = 0;
-
     GasMileage(int t) {
         miles = new float[t];
         noOfTrips = t;
